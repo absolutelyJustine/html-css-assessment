@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/964ed52044.js"></script>
+    <link href="img/main-bg.jpeg">
+  </head>
+
+  <body ng-controller="mainCtrl">
+    <div class="container">
+      <header>
+        <div>
+          <i class="fa fa-bars button-collapse" aria-hidden="true" id="menuBtn"></i>
+          <i class="fa fa-facebook button-collapse" aria-hidden="true" id="socialIcons"></i>
+          <i class="fa fa-twitter button-collapse" aria-hidden="true" id="socialIcons"></i>
+        </div>
+        <navbar class="nav-hide-on-small-only" id="top-nav">
+          <div class="site-pages">
+            <a href="#">Home</a>
+          </div>
+          <div class="site-pages">
+            <a href="#">About</a>
+          </div>
+          <div class="site-pages">
+            <a href="#">Story</a>
+          </div>
+        </navbar>
+      </header>
+      <main>
+        <div class="page-title">
+          <h1> Your</h1>
+          <h2>Personal Portfolio</h2>
+        </div>
+
+
+
+      </main>
+      <footer>
+        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+      </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      document.getElementById("menuBtn").onclick = function() {
+        showMenu()
+      };
+
+      function showMenu() {
+        document.getElementById("top-nav").classList.toggle("show");
+      }
+      window.onclick = function(event) {
+        if (!event.target.matches('.button-collapse')) {
+          var dropdowns = document.getElementsByClassName("nav-hide-on-small-only");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+    </script>
+  </body>
+
+</html>

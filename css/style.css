@@ -1,0 +1,100 @@
+body {
+  background-image: url('../img/main-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Dosis', sans-serif;
+}
+header, main, footer {
+  width: 100%;
+  clear: both;
+}
+footer {
+  text-align: center;
+  font-size: 40px;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+navbar {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-around;
+  align-content: center;
+  transition: all .35s;
+  min-height: 40px;
+  align-items: center;
+  clear:both;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+.page-title {
+  margin-top: 30%;
+  margin-bottom: 20%;
+  clear: both;
+  text-align: center;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.button-collapse {
+  text-align: center;
+  left: 2%;
+  margin-left: 2rem;
+  color: #fff;
+  font-size: 60px;
+}
+.page-title h1, .page-title h2 {
+  margin: 0;
+  padding: 0;
+}
+.page-title h1 {
+  font-size: calc(100% + 50px);
+  letter-spacing: .05em;
+}
+.page-title h2 {
+  font-size: calc(100% + 20px);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+.site-pages {
+  text-align: center;
+  flex: 1;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.hidden {
+  display:none;
+}
+.show {
+  display:block !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .nav-hide-on-small-only {
+    color: RGBA(999, 999, 999, 1.0);
+    background-color: RGBA(30, 41, 51, .75);
+    padding-top: 5px;
+    z-index: -1;
+    display: none;
+  }
+  #socialIcons {
+    display: inline-flex;
+    float:right;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #menuBtn, #socialIcons {
+    display: none !important;
+  }
+}
